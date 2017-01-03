@@ -1,0 +1,77 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#operator {
+    margin: 10px auto;
+    width:600px;
+    height: 50px;
+}
+
+#operator span {
+    width: 20px;
+}
+
+input {
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+.btn-add{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00CC99;
+}
+.btn-sub{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FFCC00;
+}
+
+button, input {
+    outline: none;
+}
+
+#outputLeft {
+    margin-left: 70px;
+}
+
+#display {
+    position: relative;
+    margin: 10px auto;
+    width:650px;
+    height:300px;
+    background-color: #dddddd;
+}
+.show{
+    position: absolute;
+    display: inline-block;
+    width:20px;
+    background-color: #ff0000;
+    margin:0;
+    bottom:0;
+    animation:myColor 10s infinite;
+    -webkit-animation:myColor 10s infinite;
+}
+@keyframes myColor
+{
+    0%{background-color:red;}
+    25% {background-color:purple;}
+    50% {background-color:blue;}
+    75%{background-color:purple;}
+    100% {background-color:red;}
+}
+
+/*Safari 和 Chrome:*/
+@-webkit-keyframes myColor
+{
+    25% {background-color:purple;}
+    50% {background-color:blue;}
+    75%{background-color:purple;}
+    100% {background-color:red;}
+}
+

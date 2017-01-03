@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #operator {
+            margin: 10px;
+            height: 50px;
+        }
+
+        #operator span {
+            width: 20px;
+        }
+
+        input {
+            height: 40px;
+        }
+
+        button {
+            width: 70px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        button, input {
+            outline: none;
+        }
+
+        #outputLeft {
+            margin-left: 100px;
+        }
+
+        #display {
+            margin: 10px;
+        }
+
+        .show {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="operator">
+    <input type="text" id="Input" value="">
+    <button id="inputLeft" class="btn-add">左侧入</button>
+    <button id="inputRight" class="btn-add">右侧入</button>
+    <button id="outputLeft" class="btn-sub">左侧出</button>
+    <button id="outputRight" class="btn-sub">右侧出</button>
+</div>
+<div id="display">
+
+</div>
+</body>
+<script type="text/javascript">
+    var arr = [];
+    var inputValue = null;
+    var input = document.getElementById("Input");
+    var display = document.getElementById("display");
+    var inputLeft = document.getElementById("inputLeft");
+    var inputRight = document.getElementById("inputRight");
+    var outputLeft = document.getElementById("outputLeft");
+    var outputRight = document.getElementById("outputRight");
+
+    function addLeft(num) {
+        arr.unshift(num);
+    }
+
+    function addRight(num) {
+        arr.push(num);
+    }
+
+    function reduceLeft() {
+        arr.shift();
+    }
+
+    function reduceRight() {
+        arr.pop();
+    }
+
+    function rederEle() {
+        display.innerHTML = arr.join(' ');
+    }
+
+    inputLeft.addEventListener('click', function () {
+        inputValue = input.value;
+        var num = "<div class='show'>" + inputValue + "</div>";
+        addLeft(num);
+        rederEle();
+    });
+
+    inputRight.addEventListener('click', function () {
+        inputValue = input.value;
+        var num = "<div class='show'>" + inputValue + "</div>";
+        addRight(num);
+        rederEle();
+    });
+
+    outputLeft.addEventListener('click', function () {
+        reduceLeft();
+        rederEle();
+    });
+
+    outputRight.addEventListener('click', function () {
+        reduceRight();
+        rederEle();
+    });
+
+</script>
+</html>

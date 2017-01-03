@@ -1,0 +1,53 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#operator {
+    margin: 10px auto;
+    width:600px;
+    height: 120px;
+}
+#textArea{
+    width:400px;
+    height:50px;
+}
+
+#operator span {
+    width: 20px;
+}
+
+input {
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+.btn-add{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #00CC99;
+}
+
+button, input,textarea {
+    outline: none;
+}
+
+#outputLeft {
+    margin-left: 70px;
+}
+
+#display {
+    margin: 10px auto;
+    width:650px;
+    height:300px;
+    background-color: #dddddd;
+}
+.show{
+    width:20px;
+    height:20px;
+    background-color: red;
+    text-align: center;
+    margin:10px;
+}
